@@ -1,4 +1,165 @@
-h1 {
-    color: aqua;
-    font-size: 48px;
+:root {
+    --bgcolor:rgb(56, 55, 50);
+    --text:white;
+    --formtext:rgb(185, 185, 185); 
+    --formpadding: 40px 60px;
+    --linkcolor:rgb(185, 185, 185);
+    
+}
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--bgcolor);
+
+}
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    position: relative;
+}
+#side-image {
+    background-image:url(./images/photo.jpg);
+    background-size: cover;
+    color: var(--text);
+    width: 100%;
+}
+#over-bg-div {
+    display: flex;
+    background-color: var(--bgcolor);
+    position: relative;
+    top: 37%;
+    opacity: 0.5;
+    align-items: center;
+    justify-content: center;
+}
+#logo-img{
+    width: 100px;
+}
+#credit {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+    top: 77%;
+    color: rgb(255, 255, 255);
+}
+#credit > a {
+    text-decoration: none;
+    color: rgb(249, 252, 250);
+}
+#credit > a:hover {
+    color: rgb(197, 195, 195);
+    transition: all 0.5s;
+}
+#right-form {
+    color: var(--text);
+    padding: 8% 0;
+
+}
+#top-text {
+    padding: var(--formpadding);
+}
+#middle-form {
+    margin: 20px 0;
+    box-sizing: border-box;
+    box-shadow: 10px;
+    background-color: rgb(80, 78, 70);
+    box-shadow: 2px 2px 25px 1px rgb(20, 20, 20);
+    padding: var(--formpadding);
+
+}
+#sign-up-form h1 {
+    width: 100%;
+}
+#sign-up-form{
+    display: flex;
+    flex-flow: row wrap;
+}
+#input {
+    color: var(--formtext);
+    width: 50%;
+    display: flex;
+    flex-flow: column wrap;
+
+}
+label {
+    text-transform: uppercase;
+}
+input {
+    height: 30px;
+    width: 90%;
+    background-color: rgb(185, 185, 185);
+    border: 0;
+    margin: 8px 0;
+    border-radius: 2px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+input:focus {
+    border: 2.5px solid rgb(255, 255, 255);
+    outline: none;
+}
+
+#bottom-buttons {
+    margin-top: 3%;
+}
+#create-account-btn{
+    height: 60px;
+    width: 180px;
+    border: 0;
+    border-radius: 5px;
+    background-color: rgb(185, 185, 185);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+
+#create-account-btn:hover{
+    background-color: white;
+    transition: background-color 0.5s;
+}
+#login-div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 60px;
+}
+#login-link {
+    text-decoration: none;
+    color: var(--linkcolor);
+}
+#login-link:hover {
+    color: rgb(216, 216, 216);
+    transition: all 0.5s;
+}
+
+
+@media only screen and (max-width: 650px) {
+    :root {
+        --formpadding: 15px 25px;
+
+    }
+    main {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #top-text{
+        padding: var(--formpadding);
+    }
+    #middle-form {
+        display: flex;
+        flex-flow: column wrap;
+        padding: var(--formpadding);
+    }
+    #bottom-buttons {
+        padding: var(--formpadding);
+    }
+    #login-div {
+        padding: var(--formpadding);
+    }
+
+    input {
+        width: 90%;
+    }
 }
